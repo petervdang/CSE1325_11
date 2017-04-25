@@ -476,8 +476,8 @@ void Shop :: create_new_robot_model()
 	Arm a = arms[arm];
 	Battery b = batterys[battery];
 
-	Robot_model robot_models(name,model_number,t,h,l,a,b);
-	
+	Robot_model robot_model(name,model_number,t,h,l,a,b);
+	robot_models.push_back(robot_model);
 }
 
 
@@ -504,6 +504,8 @@ void Shop :: list_Robot_Models()
 		message += "\n\n";
 		j++;
 	}
+
+	fl_message(message.c_str());
 }
 
 
